@@ -7,7 +7,7 @@ import Loader from '../Loader/Loader';
 import Button from '../Button/Button';
 import Modal from '../Modal/Modal';
 import NewsApiService from '../../services/pixabayservices';
-
+import { BrowserRouter } from 'react-router-dom';
 const newsApi = new NewsApiService();
 
 export default function App() {
@@ -33,12 +33,12 @@ export default function App() {
           if (hits.length === 0) {
             setImages(null);
             Swal.fire(
-              `Sorry,there are no pictures on request ${imgName}. Please try again`,
+              `Sorry,there are no pictures on request ${imgName}. Please try again`
             );
             return;
           }
         })
-        .catch((errorCatch) => {
+        .catch(errorCatch => {
           return setError(errorCatch);
         })
         .finally(() => setLoading(false));
@@ -54,7 +54,7 @@ export default function App() {
         setImages([...images, ...hits]);
         if (hits.length === 0) {
           Swal.fire(
-            `Sorry, there are no pictures on request ${imgName}. Please try again`,
+            `Sorry, there are no pictures on request ${imgName}. Please try again`
           );
           return;
         }

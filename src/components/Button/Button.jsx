@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { ButtonLoadMore } from './Button.styled';
 
-export default function Button({ onClick }) {
+export default function Layout({ onClick }) {
   return (
     <ButtonLoadMore type="button" onClick={() => onClick()}>
       Load more
@@ -9,6 +9,6 @@ export default function Button({ onClick }) {
   );
 }
 
-Button.propTypes = {
+Layout.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
