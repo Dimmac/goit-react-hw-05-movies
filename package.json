@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://Dimmac.github.io/goit-react-hw-05-movies/",
   "dependencies": {
+    "@emotion/react": "^11.8.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",

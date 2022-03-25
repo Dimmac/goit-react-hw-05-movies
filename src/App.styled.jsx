@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+// import styled from '@emotion/react';
 
 export const AppContainer = styled.div`
   display: grid;
@@ -7,8 +8,8 @@ export const AppContainer = styled.div`
   padding-bottom: 24px;
 `;
 
-export const Spinner = styled.css`
-  display: block;
-  margin: 0 auto;
-  border-color: red;
-`;
+// export const Spinner = styled.css`
+//   display: block;
+//   margin: 0 auto;
+//   border-color: red;
+// `;

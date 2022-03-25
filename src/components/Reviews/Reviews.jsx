@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import ClockLoader from 'react-spinners/ClockLoader';
 
 import { trendingFetchMoviesById } from '../../services/themoviedbApi';
 import ReviewsItem from './ReviewsItem';
 import { Info } from './Reviews.styled';
-import { Spinner } from '../../App.styled';
+// import ClockLoader from 'react-spinners/ClockLoader';
+// import { Spinner } from '../../App.styled';
+// import { css } from '@emotion/react';
 
 export const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -34,7 +35,8 @@ export const Reviews = () => {
 
   return (
     <section>
-      {loading && <ClockLoader css={Spinner} size={50} />}
+      {loading}
+      {/* {loading && <ClockLoader css={Spinner} size={50} />} */}
       {reviews.length === 0 && (
         <Info>We don't have any reviews for this movie</Info>
       )}

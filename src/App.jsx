@@ -1,11 +1,11 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import ClockLoader from 'react-spinners/ClockLoader';
 
 import { Layout } from './components/Layout/Layout';
 import { Cast } from './components/Cast/Cast';
 import { Reviews } from './components/Reviews/Reviews';
 // import { Spinner } from './App.styled';
+// import ClockLoader from 'react-spinners/ClockLoader';
 
 const HomePage = lazy(() =>
   import('./pages/HomePage/HomePage').then(module => ({
@@ -25,7 +25,8 @@ const MoviesPage = lazy(() =>
 
 export default function App() {
   return (
-    <Suspense fallback={<ClockLoader css={Spinner} size={50} />}>
+    <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<ClockLoader css={Spinner} size={50} />}> */}
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

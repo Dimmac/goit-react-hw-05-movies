@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ClockLoader from 'react-spinners/ClockLoader';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Spinner } from '../../App.styled';
 
 import { trendingFetchMoviesById } from '../../services/themoviedbApi';
 import CastListItem from './CastListItem';
 import { List, TextInfo } from './CastListItem.styled';
+// import ClockLoader from 'react-spinners/ClockLoader';
+// import { Spinner } from '../../App.styled';
 
 export const Cast = () => {
   const [actors, setActors] = useState([]);
@@ -36,7 +36,8 @@ export const Cast = () => {
       {actors.length === 0 && (
         <TextInfo>No information about the actors </TextInfo>
       )}
-      {loading && <ClockLoader css={Spinner} size={50} />}
+      {loading}
+      {/* {loading && <ClockLoader css={Spinner} size={50} />} */}
       {actors && (
         <List>
           {actors.map(({ id, character, original_name, profile_path }) => (
