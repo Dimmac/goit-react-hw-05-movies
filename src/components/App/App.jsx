@@ -1,22 +1,22 @@
 import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from './components/Layout/Layout';
-import { Cast } from './components/Cast/Cast';
-import { Reviews } from './components/Reviews/Reviews';
+import { Layout } from '../Layout/Layout';
+import { Cast } from '../Cast/Cast';
+import { Reviews } from '../Reviews/Reviews';
 import { Spinner } from 'react-awesome-spinners';
 
 const HomePage = lazy(() =>
-  import('./pages/HomePage/HomePage').then(module => ({
+  import('../../pages/HomePage/HomePage').then(module => ({
     default: module.HomePage,
   }))
 );
 const MovieDetailsPage = lazy(() =>
-  import('./pages/MovieDetailsPage/MovieDetailsPage').then(module => ({
+  import('../../pages/MovieDetailsPage/MovieDetailsPage').then(module => ({
     default: module.MovieDetailsPage,
   }))
 );
 const MoviesPage = lazy(() =>
-  import('./pages/MoviesPage/MoviesPage').then(module => ({
+  import('../../pages/MoviesPage/MoviesPage').then(module => ({
     default: module.MoviesPage,
   }))
 );
