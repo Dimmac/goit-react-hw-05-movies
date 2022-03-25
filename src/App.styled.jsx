@@ -6,3 +6,9 @@ export const AppContainer = styled.div`
   grid-gap: 16px;
   padding-bottom: 24px;
 `;
+
+export const Spinner = styled.css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;

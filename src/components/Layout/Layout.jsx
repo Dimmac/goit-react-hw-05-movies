@@ -1,44 +1,29 @@
-// import PropTypes from 'prop-types';
-// import { ButtonLoadMore } from './Button.styled';
+import { ToastContainer } from 'react-toastify';
 
-// export default function Button({ onClick }) {
-//   return (
-//     <ButtonLoadMore type="button" onClick={() => onClick()}>
-//       Load more
-//     </ButtonLoadMore>
-//   );
-// }
-
-// Button.propTypes = {
-//   onClick: PropTypes.func.isRequired,
-// };
-import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
-
-const Nav = styled.nav`
-  display: flex;
-  gap: 20px;
-`;
-
-const Link = styled(NavLink)`
-  &.active {
-    color: aqua;
-  }
-`;
-
-const Wrapper = styled.div`
-  padding: 40px;
-`;
+import { Wrapper, Nav, Link } from './Layout.styled';
+import { Outlet } from 'react-router-dom';
 
 export const Layout = () => {
   return (
-    <Wrapper>
-      <Nav>
-        <Link to="/preview">Preview</Link>
-        <Link to="/list">List</Link>
-        <Link to="/create">Create</Link>
-      </Nav>
-      Layout
-    </Wrapper>
+    <>
+      <Wrapper>
+        <Nav>
+          <Link to="/"> Home</Link>
+          <Link to="/movies"> Movies</Link>
+        </Nav>
+      </Wrapper>
+      <Outlet />
+      <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </>
   );
 };
