@@ -6,9 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { trendingFetchMoviesById } from '../../services/themoviedbApi';
 import ReviewsItem from './ReviewsItem';
 import { Info } from './Reviews.styled';
-// import ClockLoader from 'react-spinners/ClockLoader';
-// import { Spinner } from '../../App.styled';
-// import { css } from '@emotion/react';
+import { Spinner } from 'react-awesome-spinners';
 
 export const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -35,8 +33,7 @@ export const Reviews = () => {
 
   return (
     <section>
-      {loading}
-      {/* {loading && <ClockLoader css={Spinner} size={50} />} */}
+      {loading && <Spinner />}
       {reviews.length === 0 && (
         <Info>We don't have any reviews for this movie</Info>
       )}

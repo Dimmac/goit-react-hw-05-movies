@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import SearchForm from '../../components/Form/Form';
 import { searchFetchMovie } from '../../services/themoviedbApi';
 import SearchList from '../../components/SearchList/SearchList';
-/////
+
 export const MoviesPage = () => {
   const [movie, setMovie] = useState([]);
 

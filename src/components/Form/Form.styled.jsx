@@ -5,17 +5,17 @@ export const Form = styled.form`
 
   padding: 10px;
   display: flex;
-  //flex-direction: column;
+  flex-direction: column;
   align-items: flex-start;
   box-shadow: rgb(0 0 0 / 12%) 0px 1px 3px, rgb(0 0 0 / 14%) 0px 1px 1px,
     rgb(0 0 0 / 20%) 0px 2px 1px;
 `;
 export const Label = styled.label`
-  /*  padding-bottom: 20px;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   font-size: 15px;
-  font-weight: 500; */
+  font-weight: 500;
 `;
 
 export const Input = styled.input`

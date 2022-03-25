@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import { Сharacter, ListItem, Name, Image } from './CastListItem.styled';
 import img from '../../images/no-poster1.png';
 

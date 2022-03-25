@@ -6,8 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { trendingFetchMoviesById } from '../../services/themoviedbApi';
 import CastListItem from './CastListItem';
 import { List, TextInfo } from './CastListItem.styled';
-// import ClockLoader from 'react-spinners/ClockLoader';
-// import { Spinner } from '../../App.styled';
+import { Spinner } from 'react-awesome-spinners';
 
 export const Cast = () => {
   const [actors, setActors] = useState([]);
@@ -36,8 +35,7 @@ export const Cast = () => {
       {actors.length === 0 && (
         <TextInfo>No information about the actors </TextInfo>
       )}
-      {loading}
-      {/* {loading && <ClockLoader css={Spinner} size={50} />} */}
+      {loading && <Spinner />}
       {actors && (
         <List>
           {actors.map(({ id, character, original_name, profile_path }) => (

@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import { ListItemStyle, LinkStyle } from './TrendingListItem.styled';
 
 const TrendingListItem = ({ data, location }) => {
