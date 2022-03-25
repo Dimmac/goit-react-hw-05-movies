@@ -14,8 +14,7 @@ export const List = styled.ul`
   border-bottom: black solid 1px;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   margin: 0;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding: 10px;
 `;

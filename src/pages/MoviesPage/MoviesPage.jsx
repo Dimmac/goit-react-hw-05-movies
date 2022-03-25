@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import SearchForm from '../../components/Form/Form';
 import { searchFetchMovie } from '../../services/themoviedbApi';
 import SearchList from '../../components/SearchList/SearchList';

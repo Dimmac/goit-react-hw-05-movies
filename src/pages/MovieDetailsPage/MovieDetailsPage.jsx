@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,7 +22,6 @@ import {
 export const MovieDetailsPage = () => {
   const [items, setItems] = useState([]);
   const [imageUrl, setImageUrl] = useState('');
-
   const { movieId } = useParams();
   const location = useLocation();
   //console.log("location:", location);
