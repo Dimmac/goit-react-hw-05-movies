@@ -34,12 +34,13 @@ export const MovieDetailsPage = () => {
         setItems(item);
 
         const imagesUrl = await imageMovie();
-        //console.log("imageUrl: ", imagesUrl);
+        // console.log('imageUrl: ', imagesUrl);
+        // console.log('imageUrl: ', imagesUrl);
         const baseUrl = imagesUrl.images.base_url;
         const size = imagesUrl.images.poster_sizes;
         const lastElement = size[size.length - 1];
         const imageUrlOriginal = baseUrl + lastElement;
-        //console.log(imageUrlOriginal);
+        console.log(imageUrlOriginal);
         setImageUrl(imageUrlOriginal);
       } catch (error) {
         toast.error('There is no review of the video and the cast');
