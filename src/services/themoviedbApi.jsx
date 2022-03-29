@@ -14,10 +14,10 @@ export const trendingFetchMoviesById = async movie_id => {
   return response.data;
 };
 
-export const imageMovie = async () => {
-  const response = await axios.get(`configuration?api_key=${key}`);
-  return response.data;
-};
+// export const imageMovie = async () => {
+//   const response = await axios.get(`configuration?api_key=${key}`);
+//   return response.data;
+// };
 
 export const searchFetchMovie = async query => {
   const response = await axios.get(
