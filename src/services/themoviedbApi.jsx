@@ -11,6 +11,7 @@ export const trendingFetchMoviesById = async movie_id => {
   const response = await axios.get(
     `/movie/${movie_id}?api_key=${key}&language=en-US&append_to_response=credits,reviews`
   );
+  console.log(response.data);
   return response.data;
 };
 
