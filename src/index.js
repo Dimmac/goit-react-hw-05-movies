@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      {/* <BrowserRouter basename="/goit-react-hw-05-movies/"> */}
+    {/* <BrowserRouter> */}
+    <BrowserRouter basename="/goit-react-hw-05-movies/">
       <App />
     </BrowserRouter>
   </React.StrictMode>,
