@@ -3,8 +3,11 @@ import { useParams, Outlet, useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { trendingFetchMoviesById } from '../../services/themoviedbApi';
-// import {trendingFetchMoviesById,imageMovie} from '../../services/themoviedbApi';
+// import { trendingFetchMoviesById } from '../../services/themoviedbApi';
+import {
+  trendingFetchMoviesById,
+  imageMovie,
+} from '../../services/themoviedbApi';
 import MovieCard from '../../components/MovieCard/MovieCard';
 import {
   Section,
@@ -19,7 +22,7 @@ import {
 
 export const MovieDetailsPage = () => {
   const [items, setItems] = useState([]);
-  // const [imageUrl, setImageUrl] = useState('');
+  const [imageUrl, setImageUrl] = useState('');
   const { movieId } = useParams();
   const location = useLocation();
   //console.log("location:", location);
@@ -31,14 +34,14 @@ export const MovieDetailsPage = () => {
         //console.log("По Id:", item);
         setItems(item);
 
-        // const imagesUrl = await imageMovie();
+        const imagesUrl = await imageMovie();
         // console.log('imageUrl: ', imagesUrl);
-        // const baseUrl = imagesUrl.images.base_url;
-        // const size = imagesUrl.images.poster_sizes;
-        // const lastElement = size[size.length - 1];
-        // const imageUrlOriginal = baseUrl + lastElement;
+        const baseUrl = imagesUrl.images.base_url;
+        const size = imagesUrl.images.poster_sizes;
+        const lastElement = size[size.length - 1];
+        const imageUrlOriginal = baseUrl + lastElement;
         // console.log(imageUrlOriginal);
-        // setImageUrl(imageUrlOriginal);
+        setImageUrl(imageUrlOriginal);
       } catch (error) {
         toast.error('There is no review of the video and the cast');
       }
@@ -79,7 +82,7 @@ export const MovieDetailsPage = () => {
             overview,
             genres,
           }}
-          // imageUrl={imageUrl}
+          imageUrl={imageUrl}
         />
       </Section>
       <Title>Additional information</Title>
