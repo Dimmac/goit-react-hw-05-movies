@@ -25,7 +25,6 @@ export const MovieDetailsPage = () => {
     async function fetch() {
       try {
         const item = await trendingFetchMoviesById(movieId);
-        console.log('По Id:', item);
         setItems(item);
       } catch (error) {
         toast.error('There is no review of the video and the cast');

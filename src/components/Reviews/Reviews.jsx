@@ -20,7 +20,6 @@ export const Reviews = () => {
       setLoading(true);
       try {
         const item = await trendingFetchMoviesById(movieId);
-        console.log(item);
         setReviews(item.reviews.results);
       } catch (error) {
         toast.error('Oops!');
