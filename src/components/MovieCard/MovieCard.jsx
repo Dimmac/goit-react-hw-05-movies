@@ -7,7 +7,7 @@ import {
   TextGenres,
 } from './MovieCard.styled';
 
-const MovieCard = ({ dataVideo, imageUrl }) => {
+const MovieCard = ({ dataVideo }) => {
   const {
     poster_path,
     name,
@@ -26,20 +26,19 @@ const MovieCard = ({ dataVideo, imageUrl }) => {
   if (!release_date && !first_air_date) {
     filmYear = '';
   }
-  //console.log(genres);
 
   const isPosterPath = poster => {
+    const imageUrl = `http://image.tmdb.org/t/p/original`;
     if (poster !== null) {
       return `${imageUrl}${poster}`;
     }
     return `${img}`;
   };
 
-  //console.log(dataVideo);
   return (
     <Section>
       <ImageContainer>
-        <Image src={isPosterPath(poster_path)} alt="" />
+        <Image src={isPosterPath(poster_path)} alt={original_title} />
       </ImageContainer>
       <div>
         <Title>
@@ -49,7 +48,6 @@ const MovieCard = ({ dataVideo, imageUrl }) => {
         <h2>Overviev</h2>
         <p>{overview}</p>
         <h3>Genres</h3>
-        {/* {genres.length === 0 && <p>No information about genres</p>} */}
         {genres && (
           <TextGenres>{genres.map(genre => genre.name).join(', ')}</TextGenres>
         )}
@@ -59,4 +57,3 @@ const MovieCard = ({ dataVideo, imageUrl }) => {
 };
 
 export default MovieCard;
-

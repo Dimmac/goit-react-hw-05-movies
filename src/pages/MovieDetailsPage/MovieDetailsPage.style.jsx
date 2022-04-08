@@ -73,3 +73,5 @@ export const ArrowInfo = styled(ImArrowLeft)`
 
   margin-right: 2px;
 `;
+export const Image = styled.img``;
+export const ImageContainer = styled.div``;

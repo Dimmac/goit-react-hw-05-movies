@@ -12,14 +12,12 @@ export const Cast = () => {
   const [actors, setActors] = useState([]);
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
-  //console.log(actors);
 
   useEffect(() => {
     async function fetch() {
       setLoading(true);
       try {
         const item = await trendingFetchMoviesById(movieId);
-        // console.log("По Id:", item);
         setActors(item.credits.cast);
       } catch (error) {
         toast.error('Oops!');

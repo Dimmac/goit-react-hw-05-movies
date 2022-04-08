@@ -13,14 +13,12 @@ export const MoviesPage = () => {
   const location = useLocation();
 
   const query = searchParams.get('query');
-  // console.log(movieName);
 
   useEffect(() => {
     async function searchFetch() {
       try {
         if (query) {
           const item = await searchFetchMovie(query);
-          //console.log("Запит:", item);
           setMovie(item.results);
           if (item.results.length === 0) {
             toast.error('No video for your request');
@@ -35,7 +33,6 @@ export const MoviesPage = () => {
 
   const formSubmitHandler = data => {
     const { name } = data;
-    //setMovieName(name);
     setSearchParams({ query: name });
   };
 
