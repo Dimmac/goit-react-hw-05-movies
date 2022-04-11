@@ -27,18 +27,17 @@ const MovieCard = ({ dataVideo }) => {
     filmYear = '';
   }
 
-  const isPosterPath = poster => {
-    const imageUrl = `http://image.tmdb.org/t/p/original`;
-    if (poster !== null) {
-      return `${imageUrl}${poster}`;
-    }
-    return `${img}`;
-  };
-
   return (
     <Section>
       <ImageContainer>
-        <Image src={isPosterPath(poster_path)} alt={original_title} />
+        <Image
+          src={
+            poster_path
+              ? `https://image.tmdb.org/t/p/w500${poster_path}`
+              : `${img}`
+          }
+          alt={name}
+        />
       </ImageContainer>
       <div>
         <Title>
