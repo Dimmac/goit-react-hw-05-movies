@@ -33,8 +33,9 @@ const MovieCard = ({ dataVideo }) => {
         <Image
           src={
             poster_path
-              ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : `${img}`
+              ? `http://image.tmdb.org/t/p/w500${poster_path}`
+              : // ? `https://image.tmdb.org/t/p/w500${poster_path}`
+                `${img}`
           }
           alt={name}
         />
