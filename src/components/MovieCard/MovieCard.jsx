@@ -26,16 +26,13 @@ const MovieCard = ({ dataVideo }) => {
   if (!release_date && !first_air_date) {
     filmYear = '';
   }
+  const imageBaseUrl = 'http://image.tmdb.org/t/p/w500';
 
   return (
     <Section>
       <ImageContainer>
         <Image
-          src={
-            poster_path
-              ? `http://image.tmdb.org/t/p/w500${poster_path}`
-              : `${img}`
-          }
+          src={poster_path ? `${imageBaseUrl}${poster_path}` : `${img}`}
           alt={name}
         />
       </ImageContainer>
